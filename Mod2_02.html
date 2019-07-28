@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Modulo 02 (Ex 02)</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <button id="novo">Criar Quadrado</button>
+    <div id="quad"></div>
+    <script>
+     var btnElement=document.getElementById('novo')
+    var quadElement=document.getElementById('quad')
+        
+    function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+     for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+ }
+     return color;
+ }
+    var newColor = getRandomColor(); 
+  
+  
+  
+    btnElement.onclick = function (){
+  
+    var divElement=document.createElement('div');
+    divElement.style.width='100px';
+    divElement.style.height='100px';
+    divElement.style.backgroundColor='#f00';
+  
+    divElement.onmouseover = function () {
+    divElement.style.backgroundColor = getRandomColor();
+   
+}
+ quadElement.appendChild(divElement);
+};
+        
+      
+  
+</script>
+</body>
+</html>

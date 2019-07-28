@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Modulo 02 (Ex 04)</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <ul>
+          
+    </ul>
+<input type="text" name="nome">
+<button onClick="add()">Adicionar</button>      
+<script>
+    
+  var nomes = ["Diego", "Gabriel", "Lucas"];       
+
+  var lista=document.querySelector('ul');
+  var input=document.querySelector('input');   
+
+  function addItens(text) {
+  var li=document.createElement('li');
+  var texto=document.createTextNode(text);
+
+  li.appendChild(texto);
+  lista.appendChild(li);
+  }
+
+  function add(){
+    addItens(input.value);
+    input.value="";
+    
+  } 
+
+  for (nome of nomes){
+  addItens(nome);
+  }
+</script>
+</body>
+</html>
